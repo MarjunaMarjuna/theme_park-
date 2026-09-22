@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Package & Payment – Enjoy Theme Park</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="payment-page">
+
+  <header class="site-header">
+    <h1 class="animated-heading"><span>Choose Your Package</span></h1>
+  </header>
+
+  <main class="container">
+    <section class="packages">
+      <div class="package-card" data-name="Platinum" data-price="5000" data-limit="15">
+        <h3>💎 Platinum Package</h3>
+        <p>Up to 15 rides</p>
+        <p>₹5000 per person</p>
+        <button class="btn btn-primary select-package">Select Package</button>
+      </div>
+
+      <div class="package-card" data-name="Gold" data-price="3500" data-limit="11">
+        <h3>🥇 Gold Package</h3>
+        <p>Up to 11 rides</p>
+        <p>₹3500 per person</p>
+        <button class="btn btn-primary select-package">Select Package</button>
+      </div>
+
+      <div class="package-card" data-name="Silver" data-price="2500" data-limit="7">
+        <h3>🥈 Silver Package</h3>
+        <p>Up to 7 rides</p>
+        <p>₹2500 per person</p>
+        <button class="btn btn-primary select-package">Select Package</button>
+      </div>
+    </section>
+
+    <section id="summary" class="hidden">
+      <h2>Booking Summary</h2>
+      <div id="summaryDetails"></div>
+
+      <h3>Choose Payment Method</h3>
+      <div class="payment-options">
+        <img src="gpay.jpg" data-method="Google Pay" width="50" height="50">
+        <img src="phonepay.png" data-method="PhonePe" width="50" height="50">
+        <img src="paytm.jpg" data-method="Paytm" width="50" height="50">
+      </div>
+
+      <button id="confirmPay" class="btn btn-primary">Confirm & Pay</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Enjoy Theme Park</p>
+  </footer>
+
+  <script src="payment.js"></script>
+</body>
+</html>

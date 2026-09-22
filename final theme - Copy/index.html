@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enjoy Theme Park – Book Your Adventure!</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated background elements -->
+  <div class="bg">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="balloon balloon-1"></div>
+    <div class="balloon balloon-2"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="animated-heading">
+        <span>Enjoy Theme Park</span>
+        <small>– Book Your Adventure!</small>
+      </h1>
+      <nav class="top-nav">
+        <button id="openFormBtn" class="btn btn-primary material">
+          <span class="material-icons">event_available</span> Book Now
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Parks grid -->
+    <section class="parks">
+      <h2 class="section-title"><span class="material-icons">park</span> Top Theme Parks in India</h2>
+      <div class="park-grid" id="parkGrid">
+        <!-- Each card created in HTML for clarity — you can add more similarly -->
+        <div class="park-card" data-park="Wonderla (Bangalore)">
+          <img src="wondella.jpg" alt="Wonderla">
+          <div class="park-info">
+            <h3>Wonderla</h3>
+            <p>Bangalore · Kochi · Hyderabad</p>
+            <button class="btn btn-ghost select-park">Select</button>
+          </div>
+        </div>
+
+        <div class="park-card" data-park="Imagicaa (Mumbai)">
+          <img src="imagii.jpg" alt="Imagicaa">
+          <div class="park-info">
+            <h3>Imagicaa</h3>
+            <p>Mumbai</p>
+            <button class="btn btn-ghost select-park">Select</button>
+          </div>
+        </div>
+
+        <div class="park-card" data-park="Nicco Park (Kolkata)">
+          <img src="nico.jpg" alt="Nicco Park">
+          <div class="park-info">
+            <h3>Nicco Park</h3>
+            <p>Kolkata</p>
+            <button class="btn btn-ghost select-park">Select</button>
+          </div>
+        </div>
+
+        <div class="park-card" data-park="Ramoji Film City (Hyderabad)">
+          <img src="ramoji.jpg" alt="Ramoji">
+          <div class="park-info">
+            <h3>Ramoji Film City</h3>
+            <p>Hyderabad</p>
+            <button class="btn btn-ghost select-park">Select</button>
+          </div>
+        </div>
+
+        <div class="park-card" data-park="Kingdom of Dreams (Gurugram)">
+          <img src="kingdom.jpg" alt="Kingdom of Dreams">
+          <div class="park-info">
+            <h3>Kingdom of Dreams</h3>
+            <p>Gurugram</p>
+            <button class="btn btn-ghost select-park">Select</button>
+          </div>
+        </div>
+
+        <div class="park-card" data-park="Della Adventure Park (Lonavala)">
+          <img src="della.jpg" alt="Della">
+          <div class="park-info">
+            <h3>Della Adventure Park</h3>
+            <p>Lonavala</p>
+            <button class="btn btn-ghost select-park">Select</button>
+          </div>
+        </div>
+
+        <div class="park-card" data-park="Essel World (Mumbai)">
+          <img src="esel.jpg" alt="Essel World">
+          <div class="park-info">
+            <h3>Essel World</h3>
+            <p>Mumbai</p>
+            <button class="btn btn-ghost select-park">Select</button>
+          </div>
+        </div>
+
+        <div class="park-card" data-park="Fun City (Chandigarh)">
+          <img src="fun.jpg" alt="Fun City">
+          <div class="park-info">
+            <h3>Fun City</h3>
+            <p>Chandigarh</p>
+            <button class="btn btn-ghost select-park">Select</button>
+          </div>
+        </div>
+
+         <div class="park-card" data-park="Black Thunder (Coimbatore)">
+          <img src="black.webp" alt="Black Thunder">
+          <div class="park-info">
+            <h3>Black Thunder</h3>
+            <p>Coimbatore</p>
+            <button class="btn btn-ghost select-park">Select</button>
+          </div>
+        </div>
+
+        <div class="park-card" data-park="Queens Land (Chennai)">
+          <img src="queen.jpg" alt="Queens Land">
+          <div class="park-info">
+            <h3>Queens Land</h3>
+            <p>Chennai</p>
+            <button class="btn btn-ghost select-park">Select</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booker form -->
+    <section class="booking" id="bookingSection">
+      <h2 class="section-title"><span class="material-icons">how_to_reg</span> Booker Details</h2>
+      <form id="bookingForm" class="form-card" autocomplete="off">
+        <div class="form-row">
+          <label for="fullName">Full Name</label>
+          <input id="fullName" name="fullName" type="text" required placeholder="Your full name" />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com" />
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone Number</label>
+          <input id="phone" name="phone" type="tel" required placeholder="+91 98765 43210" />
+        </div>
+
+        <div class="form-row small-grid">
+          <div>
+            <label for="members">Number of Members</label>
+            <input id="members" name="members" type="number" min="1" value="2" required />
+          </div>
+
+          <div>
+            <label for="parkSelect">Select Theme Park</label>
+            <select id="parkSelect" name="parkSelect" required>
+              <option value="">-- choose a park --</option>
+              <option>Wonderla (Bangalore)</option>
+              <option>Wonderla (Kochi)</option>
+              <option>Wonderla (Hyderabad)</option>
+              <option>Imagicaa (Mumbai)</option>
+              <option>Nicco Park (Kolkata)</option>
+              <option>Ramoji Film City (Hyderabad)</option>
+              <option>Kingdom of Dreams (Gurugram)</option>
+              <option>Della Adventure Park (Lonavala)</option>
+              <option>Essel World (Mumbai)</option>
+              <option>Fun City (Chandigarh)</option>
+              <option>Black Thunder (Coimbatore)</option>
+              <option>Queens Land (Chennai)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Next</button>
+          <button type="button" id="resetBtn" class="btn btn-ghost">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Enjoy Theme Park | Designed for adventure lovers!</p>
+  </footer>
+
+  
+
+
+    <canvas id="confCanvas" class="conf-canvas" aria-hidden="true"></canvas>
+  </div>
+
+  <!-- Floating Book Now -->
+  <button id="floatingBook" class="floating-btn" aria-label="Next">
+    <span class="material-icons">add_shopping_cart</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+       
+
+
+       
